@@ -1,0 +1,137 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000000;
+  color: #fffbfb;
+  line-height: 1.6;
+  background-image: url("pexels-pixabay-531880.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: myFirstFont;
+  background-position: center;
+}
+@font-face {
+  font-family: myFirstFont;
+  src: url(MASQUE__.ttf);
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  color: #000000;
+  text-align: center;
+  padding: 10px;
+  font-family: myFirstFont;
+}
+nav ul li a {
+  color: black;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+  color: #000000;
+}
+
+nav li {
+  display: inline;
+  margin-right: 20px;
+  color: white;
+}
+
+main {
+  padding: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+table,
+th,
+td {
+  border: 1px solid #333;
+  padding: 10px;
+}
+
+audio,
+video {
+  width: 100%;
+}
+
+a {
+  color: #0077b6;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+form {
+  margin: 20px 0;
+}
+
+label,
+input,
+textarea {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #333;
+  color: #000000;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+footer {
+  background-color: #333;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.page-specific-h1 {
+  font-size: 24px;
+  color: #0077b6;
+}
+
+.page-specific-image {
+  max-width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    background-size: auto;
+  }
+
+  header {
+    padding: 5px;
+  }
+
+  nav li {
+    display: block;
+    margin: 0;
+  }
+}

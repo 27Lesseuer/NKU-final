@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+      }
+
+      canvas {
+        display: block;
+      }
+    </style>
+    <title>Superhero Game</title>
+  </head>
+  <body>
+    <canvas id="gameCanvas" width="800" height="600"></canvas>
+
+    <script>
+      const canvas = document.getElementById("gameCanvas");
+      const ctx = canvas.getContext("2d");
+
+      const superhero = {
+        x: 50,
+        y: 50,
+        width: 50,
+        height: 50,
+        speed: 5,
+      };
+
+      function drawSuperhero() {
+        ctx.fillStyle = "blue";
+        ctx.fillRect(
+          superhero.x,
+          superhero.y,
+          superhero.width,
+          superhero.height
+        );
+      }
+
+      function clearCanvas() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+      }
+
+      function update() {
+        clearCanvas();
+        drawSuperhero();
+      }
+
+      function handleKeyPress(e) {
+        switch (e.key) {
+          case "ArrowUp":
+            superhero.y -= superhero.speed;
+            break;
+          case "ArrowDown":
+            superhero.y += superhero.speed;
+            break;
+          case "ArrowLeft":
+            superhero.x -= superhero.speed;
+            break;
+          case "ArrowRight":
+            superhero.x += superhero.speed;
+            break;
+        }
+
+        update();
+      }
+
+      document.addEventListener("keydown", handleKeyPress);
+
+      // Initial draw
+      update();
+    </script>
+  </body>
+</html>
